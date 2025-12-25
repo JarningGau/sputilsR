@@ -15,9 +15,9 @@
 #'   colors are automatically generated using \code{rainbow()}. Must match the
 #'   length of \code{genes}.
 #' @param zoom.x Optional numeric value in [0, 1] specifying the relative x position
-#'   of the zoom window center (0 = left, 1 = right, 0.5 = center). Default: 0.5.
+#'   of the zoom window bottom-left corner (0 = left, 1 = right, 0.5 = center). Default: 0.5.
 #' @param zoom.y Optional numeric value in [0, 1] specifying the relative y position
-#'   of the zoom window center (0 = top, 1 = bottom, 0.5 = center). Default: 0.5.
+#'   of the zoom window bottom-left corner (0 = top, 1 = bottom, 0.5 = center). Default: 0.5.
 #' @param zoom.width.x Numeric. Width of the zoom window in pixels (x-direction).
 #'   Default: 1000.
 #' @param zoom.width.y Numeric. Height of the zoom window in pixels (y-direction).
@@ -140,13 +140,9 @@ plotCosMxGenes <- function(
     }
 
     # Convert relative position [0,1] to absolute pixel coordinates
-    # zoom.x/y represents the relative position of the zoom window center
-    zoom.x.abs <- x_min + zoom.x * x_span
-    zoom.y.abs <- y_min + zoom.y * y_span
-
-    # Calculate zoom window with center at zoom.x/y, ensuring it stays within bounds
-    zoom.x.start <- zoom.x.abs - zoom.width.x / 2
-    zoom.y.start <- zoom.y.abs - zoom.width.y / 2
+    # zoom.x/y represents the relative position of the zoom window bottom-left corner
+    zoom.x.start <- x_min + zoom.x * x_span
+    zoom.y.start <- y_min + zoom.y * y_span
 
     # Clamp zoom window to stay within full view bounds
     if (zoom.x.start < x_min) {

@@ -44,10 +44,10 @@ colors are automatically generated using \code{rainbow()}. Must match the
 length of \code{genes}.}
 
 \item{zoom.x}{Optional numeric value in \link{0, 1} specifying the relative x position
-of the zoom window center (0 = left, 1 = right, 0.5 = center). Default: 0.5.}
+of the zoom window bottom-left corner (0 = left, 1 = right, 0.5 = center). Default: 0.5.}
 
 \item{zoom.y}{Optional numeric value in \link{0, 1} specifying the relative y position
-of the zoom window center (0 = top, 1 = bottom, 0.5 = center). Default: 0.5.}
+of the zoom window bottom-left corner (0 = top, 1 = bottom, 0.5 = center). Default: 0.5.}
 
 \item{zoom.width.x}{Numeric. Width of the zoom window in pixels (x-direction).
 Default: 1000.}
