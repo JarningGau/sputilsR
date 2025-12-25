@@ -10,3 +10,20 @@ developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repo
 
 The package `sputilsR` is my code hub for utilities in spatial-omics
 visualization.
+
+## Installation
+
+You can install the development version of `sputilsR` from
+[GitHub](https://github.com/jarninggau/scutilsR) with:
+
+``` r
+# install.packages("devtools")  # if you haven't installed devtools yet
+devtools::install_github("jarninggau/scutilsR")
+```
+
+Or using `remotes`:
+
+``` r
+# install.packages("remotes")  # if you haven't installed remotes yet
+remotes::install_github("jarninggau/scutilsR")
+```
