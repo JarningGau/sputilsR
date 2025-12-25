@@ -1,0 +1,29 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# R CMD build / check artifacts
+*.tar.gz
+*.Rcheck/
+
+# RStudio / VSCode project files
+*.Rproj
+.vscode/
+
+# Package documentation / build outputs
+inst/doc/
+doc/
+Meta/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*~
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+
